@@ -96,8 +96,13 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  var personInfo = {
+    id: id,
+    name: name,
+    email: email
+  }
+  return personInfo;
 }
 
 /**
