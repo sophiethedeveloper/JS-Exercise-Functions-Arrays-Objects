@@ -144,7 +144,13 @@ function getName(objectName) {
  * the returned value should be: 2.
 */
 function appleIndex(appleArr) {
- return appleArr.indexOf("apple");
+  for (let i = 0; i < appleArr.length; i++){
+    if(appleArr[i] === "apple"){
+      return i;
+    }
+  }
+
+//  return appleArr.indexOf("apple");
 }
 
 /**
@@ -246,7 +252,7 @@ function getCarInfoByIndex(inventory, index) {
  * it will return `This is a Lincoln Town Car`.
 */
 function getLastCarInfo(inventory) {
-  const LastCar = inventory[49];
+  const LastCar = inventory[inventory.length - 1];
   return `This is a ${LastCar.car_make} ${LastCar.car_model}`;
 }
 
@@ -282,8 +288,7 @@ function getModelYears(inventory) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById() {
 }
 
 /**
