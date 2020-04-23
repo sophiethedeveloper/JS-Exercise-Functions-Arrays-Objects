@@ -54,7 +54,7 @@ function sayGoodbye(name) {
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
 function temperatureCtoF(celsius) {
-  var celsiusFormula = Math.round((celsius * 9/5 ) + 32)
+  let celsiusFormula = Math.round((celsius * 9/5 ) + 32)
   return celsiusFormula;
 }
 
@@ -75,8 +75,13 @@ function temperatureCtoF(celsius) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(number, temperature) {
+  if(temperature === "F"){
+    return number + "F";
+  }
+  else if (temperature === "C"){
+    return temperatureCtoF(number) + "F";
+  }
 }
 
 
